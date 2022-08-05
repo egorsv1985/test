@@ -1,0 +1,71 @@
+.sidebar {
+	padding-right: 65px;
+  grid-area: sidebar;
+
+  // .sidebar__wrapper
+  &__wrapper {
+    @include flex(space-between, $flex-direction: column);
+	height: 100%;
+    
+  }
+  
+	// .sidebar__inner
+	&__inner {
+		@include flex(space-between, $flex-direction: column);
+		gap: 60px;
+	}
+
+
+  // .sidebar__logo
+  &__logo {
+  }
+  // .sidebar__title
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: $mainColor;
+  }
+  // .sidebar__nav
+  &__nav {
+  }
+  .nav {
+    // .nav__list
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+    }
+    // .nav__item
+    &__item {
+    }
+    // .nav__link
+    &__link {
+      @include flex(space-between, center);
+      gap: 10px;
+    }
+    // .nav__img
+    &__img {
+    }
+  }
+  // .sidebar__wrap
+  &__wrap {
+    @include flex(space-between, center);
+  }
+  // .sidebar__chat
+  &__chat {
+    @include flex(center, center);
+    @include wh(47px);
+
+    background-color: #f6f6f6;
+  }
+  // .sidebar__text
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: $mainColor;
+  }
+}

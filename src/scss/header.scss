@@ -1,0 +1,53 @@
+.header {
+  // .header__wrapper
+  &__wrapper {
+    @include flex(space-between, center, wrap);
+  }
+  // .header__form-search
+  &__form-search {
+	@include flex();
+	gap: 15px;
+  }
+
+  
+  // .header__search-field
+  &__search-field {
+  }
+  // .header__search-clear
+  &__search-clear {
+	display: none;
+  }
+  // .header__search-btn
+  &__search-btn {
+  }
+  // .header__search-btn--icon
+  &__search-btn--icon {
+  }
+  // .header__wrap
+  &__wrap {
+	@include flex(space-between, center, wrap);
+	gap: 50px;
+  }
+  // .header__nav
+  &__nav {
+  }
+  .nav {
+    // .nav__list
+    &__list {
+    }
+    // .nav__item
+    &__item {
+    }
+    // .nav__link
+    &__link {
+    }
+  }
+  // .header__box-icon
+  &__box-icon {
+	@include flex(space-between, center);
+	gap: 25px;
+  }
+  // .header__link
+  &__link {
+  }
+}

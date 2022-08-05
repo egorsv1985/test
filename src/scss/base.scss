@@ -1,0 +1,106 @@
+// Общий файл элементов форм
+// Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
+// @import "base/forms/forms";
+
+// Стили попапов
+// @import "base/popup";
+
+// Стили спойлеров
+// @import "base/spollers";
+
+// Стили табов
+// @import "base/tabs";
+
+// Стили карт
+// @import "base/maps";
+
+// Стили блока "показать еще"
+// @import "base/showmore";
+
+// Стили для полноэкранного блока
+// @import "base/fullscreen";
+
+// Стили для липкого блока
+// @import "base/sticky";
+
+// Стили для отзывчивых картинок (IBG)
+// Сниппет (HTML): ibg (div c картинкой и классами)
+// Сниппет (HTML): ibga (a c картинкой и классами)
+[class*="-ibg"] {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+[class*="-ibg_contain"] {
+  img {
+    object-fit: contain;
+  }
+}
+
+// Шаблоны (заготовки)
+// @extend %имя шаблона;
+// Сниппет (SCSS): ex
+
+// Счетчик для списка
+%listCounter {
+  list-style-type: none;
+  counter-reset: item;
+
+  li {
+    position: relative;
+
+    &:before {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+body {
+  margin: 0 auto;
+  background: #e5e5e5;
+  color: #000;
+}
+
+main {
+	padding: 50px 50px 60px 56px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  width: 1440px;
+  height: 990px;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(84px);
+
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  gap: 20px;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar grid grid";
+}
+.sidebar {
+  
+}
+.grid {
+  grid-area: grid;
+}
+.header {
+  grid-area: header;
+}

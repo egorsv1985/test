@@ -1,0 +1,103 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  grid-template-areas:
+    "one one seven eight"
+    "two two seven eight"
+    "three four five five"
+    "three four six six";
+
+  // .grid__item
+  &__item {
+    @include flex(center, center);
+    position: relative;
+    &:first-child {
+      grid-area: one;
+    }
+    &:nth-child(2) {
+      grid-area: two;
+    }
+    &:nth-child(3) {
+      grid-area: three;
+    }
+    &:nth-child(4) {
+      grid-area: four;
+    }
+    &:nth-child(5) {
+      grid-area: five;
+    }
+    &:nth-child(6) {
+      grid-area: six;
+    }
+    &:nth-child(7) {
+      grid-area: seven;
+    }
+    &:last-child {
+      grid-area: eight;
+    }
+  }
+  // .grid__img
+  &__img {
+  }
+  // .grid__content
+  &__content {
+    @include pos(absolute, $top: 50%, $left: 28px);
+    @include flex($flex-direction: column);
+	gap: 15px;
+	transform: translateY(-50%);
+	width: 100%;
+   
+	&--center{
+		align-items: center;
+		transform: translate(-50%, -50%);
+		left: 50%;
+
+		
+	}
+  }
+  // .grid__text
+  &__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+	text-align: left;
+
+    &--big {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 35px;
+	  text-align: center;
+    }
+
+    &--blue {
+      font-size: 26px;
+      line-height: 30px;
+
+      color: #001aa2;
+
+    }
+    &--red {
+      font-size: 26px;
+      line-height: 30px;
+
+      color: #fd2e24;
+    }
+  }
+  // .grid__favorite
+  &__favorite {
+    cursor: pointer;
+
+    @include wh(38px);
+    @include pos(absolute, $top: 22px, $right: 30px);
+    z-index: 1;
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-image: url("@img/icons/heart.svg");
+  }
+}
