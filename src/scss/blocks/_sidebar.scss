@@ -1,6 +1,10 @@
 .sidebar {
 	padding-right: 65px;
+  padding-top: 15px;
   grid-area: sidebar;
+  @include media (max, lg){
+    padding-right: 40px;
+  }
 
   // .sidebar__wrapper
   &__wrapper {

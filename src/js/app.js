@@ -39,14 +39,14 @@ flsFunctions.menuInit();
 Документация:
 Сниппет (HTML): spollers
 */
-flsFunctions.spollers();
+// flsFunctions.spollers();
 
 /*
 Модуль работы с табами
 Документация:
 Сниппет (HTML): tabs
 */
-flsFunctions.tabs();
+// flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -128,7 +128,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-import "./files/sliders.js";
+// import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
@@ -191,33 +191,3 @@ import * as flsScroll from "./files/scroll/scroll.js";
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
-
-
-const body = document.body;
-const scrollUp = "scroll-up";
-const scrollDown = "scroll-down";
-let lastScroll = 0;
-
-window.addEventListener("scroll", () => {
-	const currentScroll = window.pageYOffset;
-	if (currentScroll <= 0) {
-		body.classList.remove(scrollUp);
-		return;
-	}
-
-	if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
-		// down
-		body.classList.remove(scrollUp);
-		body.classList.add(scrollDown);
-		// lottiePlayer.play();
-	} else if (
-		currentScroll < lastScroll &&
-		body.classList.contains(scrollDown)
-	) {
-		// up
-		body.classList.remove(scrollDown);
-		body.classList.add(scrollUp);
-		// lottiePlayer.stop();
-	}
-	lastScroll = currentScroll;
-});

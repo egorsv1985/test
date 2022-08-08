@@ -74,14 +74,14 @@ body {
 }
 
 main {
-	padding: 50px 50px 60px 56px;
+	padding: 35px 50px 60px 56px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  width: 1440px;
-  height: 990px;
-
+  max-width: 1440px;
+ 
+width: 100%;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(84px);
 

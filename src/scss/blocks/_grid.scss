@@ -9,6 +9,19 @@
     "two two seven eight"
     "three four five five"
     "three four six six";
+    @include media (max, xxl){
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+    "one one"
+    "two two"
+    "seven eight"
+    "seven eight"
+    "three four"
+    "three four"
+    "five five"
+    "six six";
+    margin: 0 auto;
+    }
 
   // .grid__item
   &__item {
@@ -41,6 +54,9 @@
   }
   // .grid__img
   &__img {
+    @include media (max, lg){
+      max-width: 100%;
+    }
   }
   // .grid__content
   &__content {
@@ -49,6 +65,9 @@
 	gap: 15px;
 	transform: translateY(-50%);
 	width: 100%;
+  @include media (max, md){
+    max-width: 230px;
+  }
    
 	&--center{
 		align-items: center;
